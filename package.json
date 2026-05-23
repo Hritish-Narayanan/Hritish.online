@@ -1,0 +1,26 @@
+{
+  "name": "hritish-online",
+  "version": "1.0.0",
+  "description": "Hritish Narayanan's personal portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hritish-Narayanan/Hritish.online.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website"
+  ],
+  "author": "Hritish Narayanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hritish-Narayanan/Hritish.online/issues"
+  },
+  "homepage": "https://github.com/Hritish-Narayanan/Hritish.online#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
