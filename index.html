@@ -23,10 +23,13 @@
         }
     </script>
     <!-- Vercel Speed Insights -->
-    <script type="module">
-        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@2.0.0/+esm';
-        injectSpeedInsights();
+    <!-- IMPORTANT: Replace _vercel/speed-insights with your actual unique path from Vercel Dashboard -->
+    <!-- To get the unique path: Enable Speed Insights in your Vercel project dashboard -->
+    <!-- The path will be automatically generated and available after enabling -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans text-gray-900">
 
