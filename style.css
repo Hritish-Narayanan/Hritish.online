@@ -635,7 +635,7 @@ section[id] { scroll-margin-top: 3rem; }
 }
 
 .contact-ascii {
-    font-family: var(--font-mono);
+    font-family: "Courier New", Courier, monospace;
     font-size: clamp(0.55rem, 1.3vw, 0.85rem);
     line-height: 1.4;
     color: color-mix(in srgb, var(--paper) 75%, transparent);
