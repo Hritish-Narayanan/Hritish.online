@@ -837,8 +837,10 @@ section[id] { scroll-margin-top: 3rem; }
         margin-inline: auto;
     }
     .contact-ascii.js-scaled {
-        width: 100%;
+        width: max-content;
+        max-width: 100%;
         overflow: hidden;
+        margin-inline: auto;
     }
     .contact-center {
         padding-inline: 1rem;

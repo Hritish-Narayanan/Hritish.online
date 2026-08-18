@@ -171,13 +171,30 @@
         // Scale project and contact ASCII diagrams
         document.querySelectorAll(".project-ascii, .contact-ascii").forEach((container) => {
             const pre = container.querySelector("pre");
+            const isContact = container.classList.contains("contact-ascii");
+            if (isContact) {
+                // The contact diagram is itself the <pre>; keep its natural
+                // width so the scaled artwork remains centered by auto margins.
+                container.style.transform = "";
+                container.style.transformOrigin = "top center";
+                container.classList.add("js-scaled");
+
+                const availableWidth = container.parentElement?.clientWidth ?? container.clientWidth;
+                const naturalWidth = container.scrollWidth;
+                if (naturalWidth > availableWidth) {
+                    const scale = availableWidth / naturalWidth;
+                    container.style.transform = `scale(${scale})`;
+                    container.style.height = `${container.scrollHeight * scale}px`;
+                } else {
+                    container.style.height = "";
+                }
+                return;
+            }
             if (!pre) return;
 
             // Reset scale to measure natural width
             pre.style.transform = "";
-            pre.style.transformOrigin = container.classList.contains("contact-ascii")
-                ? "top center"
-                : "top left";
+            pre.style.transformOrigin = "top left";
             container.classList.add("js-scaled");
 
             const containerWidth = container.clientWidth;
