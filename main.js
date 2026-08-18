@@ -210,8 +210,14 @@
         }
     };
 
-    // Run on load and resize
+    // Run after fonts settle as well as immediately. Mobile browsers often
+    // swap fallback fonts after first paint; measuring before that swap can
+    // produce a stale scale and clip the final row.
     scaleAsciiDiagrams();
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(scaleAsciiDiagrams);
+    }
+    window.addEventListener("load", scaleAsciiDiagrams, { once: true });
     let resizeTimer;
     window.addEventListener("resize", () => {
         clearTimeout(resizeTimer);
