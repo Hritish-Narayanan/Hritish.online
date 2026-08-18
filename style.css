@@ -25,7 +25,7 @@
 /* ── Reset ─────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -125,6 +125,7 @@ img { display: block; max-width: 100%; height: auto; }
     padding-top: 3.5rem; /* nav height */
     position: relative;
     border-bottom: 1px solid var(--line);
+    overflow: hidden;
 }
 
 .hero-meta-strip {
@@ -144,7 +145,7 @@ img { display: block; max-width: 100%; height: auto; }
     position: absolute;
     inset: 0;
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: clamp(10px, 1.2vw, 18px);
     line-height: 1.6;
     color: var(--ink);
     opacity: 0.045;
@@ -152,6 +153,9 @@ img { display: block; max-width: 100%; height: auto; }
     user-select: none;
     white-space: pre;
     overflow: hidden;
+    /* Repeat the grid pattern to cover any viewport */
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 .hero-grid {
@@ -169,6 +173,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-left {
     position: relative;
     z-index: 3; /* the masthead crosses into the portrait column */
+    min-width: 0;
 }
 
 .hero-name {
@@ -319,6 +324,7 @@ img { display: block; max-width: 100%; height: auto; }
     border-top: 1px solid var(--line);
     overflow: hidden;
     padding: 0.55rem 0;
+    width: 100%;
 }
 .hero-ticker-track {
     display: inline-block;
@@ -430,18 +436,33 @@ section[id] { scroll-margin-top: 3rem; }
     border: 1px solid var(--line);
     padding: clamp(0.9rem, 2vw, 1.5rem);
     background: var(--paper);
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     text-align: left;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0, "calt" 0;
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    /* Allow horizontal scroll only when JS scaling isn't active */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+.project-ascii.js-scaled {
+    overflow-x: hidden;
 }
 .project-ascii pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: clamp(0.52rem, 0.9vw, 0.78rem);
+    line-height: 1.35;
+    font-weight: 400;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    font-feature-settings: normal;
+    text-rendering: geometricPrecision;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+    letter-spacing: 0;
     width: max-content;
     min-width: 100%;
     margin: 0;
@@ -621,8 +642,7 @@ section[id] { scroll-margin-top: 3rem; }
     display: block;
     width: max-content;
     max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     text-align: left;
@@ -631,6 +651,11 @@ section[id] { scroll-margin-top: 3rem; }
     white-space: pre;
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0, "calt" 0;
+}
+.contact-ascii.js-scaled {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .contact-line {
@@ -728,6 +753,7 @@ section[id] { scroll-margin-top: 3rem; }
         margin-right: 0;
     }
     .hero-right { order: -1; }
+    .hero-left { overflow: hidden; }
     .hero-portrait {
         width: min(82%, 22rem);
         margin: 0 auto;
@@ -796,12 +822,15 @@ section[id] { scroll-margin-top: 3rem; }
         display: block;
         width: 100%;
         max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: hidden;
         font-size: 0.48rem;
         line-height: 1.35;
         letter-spacing: -0.04em;
         margin-inline: auto;
+    }
+    .contact-ascii.js-scaled {
+        width: 100%;
+        overflow: hidden;
     }
     .contact-center {
         padding-inline: 1rem;

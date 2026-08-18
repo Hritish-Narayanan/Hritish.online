@@ -161,4 +161,76 @@
     if (yearEl) {
         yearEl.textContent = `© ${currentYear} — ISSUE 01`;
     }
+
+    /* ── 6. Scale ASCII diagrams to fit their containers ───────────
+       On every resize, measure each .project-ascii and .contact-ascii.
+       If the <pre> content is wider than the container, apply a CSS
+       transform: scale() to shrink it down. This keeps the ASCII art
+       readable on mobile while staying full-size on desktop. */
+    const scaleAsciiDiagrams = () => {
+        // Scale project and contact ASCII diagrams
+        document.querySelectorAll(".project-ascii, .contact-ascii").forEach((container) => {
+            const pre = container.querySelector("pre");
+            if (!pre) return;
+
+            // Reset scale to measure natural width
+            pre.style.transform = "";
+            pre.style.transformOrigin = "top left";
+            container.classList.add("js-scaled");
+
+            const containerWidth = container.clientWidth;
+            const preWidth = pre.scrollWidth;
+
+            if (preWidth > containerWidth) {
+                const scale = containerWidth / preWidth;
+                pre.style.transform = `scale(${scale})`;
+                // Adjust container height to match scaled content
+                container.style.height = `${pre.scrollHeight * scale}px`;
+            } else {
+                container.style.height = "";
+            }
+        });
+
+        // Scale hero ASCII background to cover the viewport
+        const heroAscii = document.querySelector(".hero-ascii-bg");
+        if (heroAscii) {
+            const viewportWidth = window.innerWidth;
+            // The pre is absolutely positioned, so we check if the text
+            // content extends beyond the viewport
+            heroAscii.style.transform = "";
+            heroAscii.style.transformOrigin = "top left";
+            
+            if (heroAscii.scrollWidth > viewportWidth) {
+                const scale = viewportWidth / heroAscii.scrollWidth;
+                heroAscii.style.transform = `scale(${scale})`;
+                heroAscii.style.height = `${heroAscii.scrollHeight * scale}px`;
+            } else {
+                heroAscii.style.height = "";
+            }
+        }
+    };
+
+    // Run on load and resize
+    scaleAsciiDiagrams();
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(scaleAsciiDiagrams, 150);
+    });
+
+    // Also re-scale when projects become visible (lazy content)
+    if ("IntersectionObserver" in window) {
+        const asciiObserver = new IntersectionObserver(
+            (entries) => {
+                for (const entry of entries) {
+                    if (entry.isIntersecting) {
+                        scaleAsciiDiagrams();
+                        asciiObserver.unobserve(entry.target);
+                    }
+                }
+            },
+            { threshold: 0.05 }
+        );
+        document.querySelectorAll(".project-ascii, .contact-ascii").forEach((el) => asciiObserver.observe(el));
+    }
 })();

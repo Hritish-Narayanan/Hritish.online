@@ -216,21 +216,21 @@
 
                 <div class="project-body">
                     <div class="project-ascii" aria-hidden="true">
-<pre>  ┌─────────────────────────────────────┐
-  │         CHUNK POOL                  │
-  │  ┌────┐ ┌────┐ ┌────┐ ┌────┐        │
-  │  │ C0 │→│ C1 │→│ C2 │→│ C3 │→···   │
-  │  └────┘ └────┘ └────┘ └────┘        │
-  │     ▲                       │       │
-  │     └───────────────────────┘       │
-  │         recycle, never alloc        │
-  ├─────────────────────────────────────┤
-  │  INPUT → FSM → PHYSICS → SCORE      │
-  │   ┌──┐   ┌──┐   ┌────┐   ┌───┐      │
-  │   │⤒ │   │◉ │   │ ▓▓ │   │ ×2│      │
-  │   └──┘   └──┘   └────┘   └───┘      │
-  │  jump   roll   lean    combo        │
-  └─────────────────────────────────────┘</pre>
+<pre role="img" aria-label="Hect Runner chunk pool and game loop diagram">+-------------------------------------+
+|           CHUNK POOL                |
+|  +----+  +----+  +----+  +----+     |
+|  | C0 |->| C1 |->| C2 |->| C3 |->...|
+|  +----+  +----+  +----+  +----+     |
+|     ^                         |     |
+|     +-------------------------+     |
+|          recycle, never alloc       |
++-------------------------------------+
+|  INPUT -> FSM -> PHYSICS -> SCORE   |
+|   +--+    +--+    +----+    +---+   |
+|   |^ |    |o |    |##  |    |x2 |   |
+|   +--+    +--+    +----+    +---+   |
+|   jump    roll    lean      combo   |
++-------------------------------------+</pre>
                     </div>
                     <div class="project-text">
                         <p class="project-lede">
@@ -314,19 +314,19 @@
 
                 <div class="project-body">
                     <div class="project-ascii" aria-hidden="true">
-<pre>   ┌─────────────┐         ┌─────────────┐
-   │ GOOGLE FORM │         │ GOOGLE DOC  │
-   │  ┌───┐      │         │  ┌───┐      │
-   │  │ Q │──┐   │         │  │ ✎ │──┐   │
-   │  └───┘  │   │         │  └───┘  │   │
-   │  ┌───┐  │   │         │         │   │
-   │  │ A │◀─┼───┼──┐      │         │   │
-   │  └───┘  │   │  │      │         │   │
-   └─────────────┘  │  ┌───▼─────────▼───┐
-                    └──┤    Z.AI API     │
-                       │  extract → answer│
-                       │  → fill → assist │
-                       └─────────────────┘</pre>
+<pre role="img" aria-label="Auto Exam Google Forms, Google Docs, and Z.AI API workflow">+-------------+         +-------------+
+| GOOGLE FORM |         | GOOGLE DOC  |
+|  +---+      |         |  +---+      |
+|  | Q |--+   |         |  | w |--+   |
+|  +---+  |   |         |  +---+  |   |
+|  +---+  |   |         |         |   |
+|  | A |<-+---+------+   |         |  |
+|  +---+  |   |      |   |         |  |
++---------+   |  +---v-+---------v---+ 
+               +--|    Z.AI API      | 
+                  | extract -> answer |
+                  | -> fill -> assist |
+                  +-------------------+</pre>
                     </div>
                     <div class="project-text">
                         <p class="project-lede">
