@@ -658,6 +658,11 @@ section[id] { scroll-margin-top: 3rem; }
     max-width: 100%;
     overflow: hidden;
 }
+.contact-ascii pre {
+    width: max-content;
+    min-width: 0;
+    margin-inline: auto;
+}
 
 .contact-line {
     font-family: var(--font-serif);

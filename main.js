@@ -175,7 +175,9 @@
 
             // Reset scale to measure natural width
             pre.style.transform = "";
-            pre.style.transformOrigin = "top left";
+            pre.style.transformOrigin = container.classList.contains("contact-ascii")
+                ? "top center"
+                : "top left";
             container.classList.add("js-scaled");
 
             const containerWidth = container.clientWidth;
