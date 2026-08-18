@@ -662,6 +662,7 @@ section[id] { scroll-margin-top: 3rem; }
     width: max-content;
     min-width: 0;
     margin-inline: auto;
+    transform-origin: top center;
 }
 
 .contact-line {
@@ -829,9 +830,10 @@ section[id] { scroll-margin-top: 3rem; }
         width: 100%;
         max-width: 100%;
         overflow: hidden;
-        font-size: 0.48rem;
+        /* 41 columns; size the cell grid from the actual phone width. */
+        font-size: min(0.85rem, 3.5vw);
         line-height: 1.35;
-        letter-spacing: -0.04em;
+        letter-spacing: 0;
         margin-inline: auto;
     }
     .contact-ascii.js-scaled {
