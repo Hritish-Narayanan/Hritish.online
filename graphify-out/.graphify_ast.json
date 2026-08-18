@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "hritish_online_main_components_navbar",
+      "label": "navbar.js",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "hritish_online_main_components_navbar_customnavbar",
+      "label": "CustomNavbar",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hritish_online_main_components_navbar_customnavbar_connectedcallback",
+      "label": ".connectedCallback()",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "hritish_online_main_components_navbar",
+      "target": "hritish_online_main_components_navbar_customnavbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hritish_online_main_components_navbar_customnavbar",
+      "target": "hritish_online_main_components_navbar_customnavbar_connectedcallback",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": []
+}

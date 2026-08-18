@@ -1,0 +1,24 @@
+{
+  "communities": {
+    "0": [
+      "hritish_online_main_components_navbar",
+      "hritish_online_main_components_navbar_customnavbar",
+      "hritish_online_main_components_navbar_customnavbar_connectedcallback"
+    ]
+  },
+  "cohesion": {
+    "0": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "hritish_online_main_components_navbar_customnavbar",
+      "label": "CustomNavbar",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

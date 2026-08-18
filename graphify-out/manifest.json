@@ -1,0 +1,80 @@
+{
+  "Hritish.online-main/main.js": {
+    "mtime": 1786830409.0129063,
+    "seen": 1786830439.229259,
+    "ast_hash": "5b89a6a1d4878a2443818682e4ac6336",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1786823840.3243952,
+    "seen": 1786830439.22926,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "Hritish.online-main/index.html": {
+    "mtime": 1786830377.2116468,
+    "seen": 1786830439.2292612,
+    "ast_hash": "b488e84c8ccb3610ed8f5fea3fb6b56e",
+    "semantic_hash": ""
+  },
+  "Hritish.online-main/robots.txt": {
+    "mtime": 1786826495.2027514,
+    "seen": 1786830439.229262,
+    "ast_hash": "5e0bd1c281a62a380d7a948085bfe2d1",
+    "semantic_hash": ""
+  },
+  "IDEA.md": {
+    "mtime": 1786821437.97385,
+    "seen": 1786830439.229262,
+    "ast_hash": "c2857b1b22b01d8ec3b9b32e889ee3d3",
+    "semantic_hash": ""
+  },
+  "test_graph/test.md": {
+    "mtime": 1786822515.9986897,
+    "seen": 1786830439.229263,
+    "ast_hash": "7ad888d63841c0edfe0785ea61e77bfe",
+    "semantic_hash": ""
+  },
+  "whatshere.md": {
+    "mtime": 1786822105.7006898,
+    "seen": 1786830439.229263,
+    "ast_hash": "486b3540cfe0b8632670d67c884fc340",
+    "semantic_hash": ""
+  },
+  "whatshere_explained.md": {
+    "mtime": 1786821887.3877306,
+    "seen": 1786830439.2292638,
+    "ast_hash": "80c2020101e7a6e4dd738c685ea51505",
+    "semantic_hash": ""
+  },
+  "whatshere_full.md": {
+    "mtime": 1786821848.1644096,
+    "seen": 1786830439.2292638,
+    "ast_hash": "bdb7626cad156f21bfca0cc65664c366",
+    "semantic_hash": ""
+  },
+  "Hritish.online-main/assets/me.jpg": {
+    "mtime": 1786826213.1943526,
+    "seen": 1786830439.229265,
+    "ast_hash": "04483ea386edcbf89379edee6afa5164",
+    "semantic_hash": ""
+  },
+  "Hritish.online-main/assets/me.png": {
+    "mtime": 1786825249.9886377,
+    "seen": 1786830439.229265,
+    "ast_hash": "7bdeaa66201d08c6d44cb0fb32581ca8",
+    "semantic_hash": ""
+  },
+  "Hritish.online-main/pfp.jpg": {
+    "mtime": 1782548162.0,
+    "seen": 1786830439.229266,
+    "ast_hash": "91e0399291335ed8a737ed36d29302cb",
+    "semantic_hash": ""
+  },
+  "me.png": {
+    "mtime": 1786811650.3679316,
+    "seen": 1786830439.229266,
+    "ast_hash": "7bdeaa66201d08c6d44cb0fb32581ca8",
+    "semantic_hash": ""
+  }
+}

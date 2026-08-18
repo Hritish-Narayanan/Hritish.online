@@ -1,0 +1,68 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "CustomNavbar",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "customnavbar",
+      "community_name": "CustomNavbar",
+      "id": "hritish_online_main_components_navbar_customnavbar"
+    },
+    {
+      "label": ".connectedCallback()",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": ".connectedcallback()",
+      "community_name": "CustomNavbar",
+      "id": "hritish_online_main_components_navbar_customnavbar_connectedcallback"
+    },
+    {
+      "label": "navbar.js",
+      "file_type": "code",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "navbar.js",
+      "community_name": "CustomNavbar",
+      "id": "hritish_online_main_components_navbar"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "hritish_online_main_components_navbar",
+      "target": "hritish_online_main_components_navbar_customnavbar"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Hritish.online-main/components/navbar.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "hritish_online_main_components_navbar_customnavbar",
+      "target": "hritish_online_main_components_navbar_customnavbar_connectedcallback"
+    }
+  ],
+  "hyperedges": []
+}
