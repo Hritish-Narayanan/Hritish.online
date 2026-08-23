@@ -1,8 +1,17 @@
+# System files
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
 
-# Playwright
+# Testing
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+.playwright/
+
+# Development tools
+graphify-out/
+test_graph/
+
+# Auto-generated docs
+whatshere*.md

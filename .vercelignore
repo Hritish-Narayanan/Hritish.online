@@ -1,5 +1,13 @@
-.DS_Store
-whatshere*.md
-IDEA.md
-test_graph/
+# Testing
+tests/
+playwright.config.js
+
+# Development tools
 graphify-out/
+test_graph/
+
+# Auto-generated docs
+whatshere*.md
+
+# System files
+.DS_Store
