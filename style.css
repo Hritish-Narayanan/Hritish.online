@@ -3,6 +3,15 @@
    Editorial / newspaper collage / ASCII / portrait system
    ═══════════════════════════════════════════════════════════════ */
 
+/* ── Chomsky (masthead blackletter — 1001fonts.com/chomsky-font.html) ── */
+@font-face {
+    font-family: "Chomsky";
+    src: url("assets/fonts/Chomsky.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ── Design tokens ─────────────────────────────────────────────── */
 :root {
     --paper:      #f2efe8;
@@ -14,6 +23,7 @@
     --line:       #16130e;
 
     --font-black:  "UnifrakturMaguntia", serif;
+    --font-chomsky: "Chomsky", "UnifrakturMaguntia", serif;
     --font-serif:  "Instrument Serif", Georgia, serif;
     --font-sans:   "Space Grotesk", -apple-system, sans-serif;
     --font-mono:   "IBM Plex Mono", "SF Mono", monospace;
@@ -177,7 +187,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .hero-name {
-    font-family: var(--font-black);
+    font-family: var(--font-chomsky);
     font-weight: 400;
     font-size: clamp(5rem, 12vw, 10.5rem);
     line-height: 0.92;
@@ -355,7 +365,7 @@ section[id] { scroll-margin-top: 3rem; }
     border-bottom: 3px solid var(--line);
 }
 .section-title {
-    font-family: var(--font-black);
+    font-family: var(--font-chomsky);
     font-weight: 400;
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     line-height: 1;
