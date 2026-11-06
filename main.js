@@ -75,10 +75,10 @@
     /* ── 3. ASCII scramble on project titles ───────────────────────
        On hover, headline letters briefly cycle through ASCII glyphs
        before settling back — a printed page glitching into terminal. */
-    const GLYPHS = "█▓▒░╬╠╣╔╗╚╝#%&@$0101/\\|<>*+=~";
+    const GLYPHS = "█▓▒░╬╠╣╔╗╚╝#%@$0101/\\|*+=~!?_[]";
 
     const scramble = (el) => {
-        if (prefersReducedMotion) return;
+        if (!el || prefersReducedMotion) return;
         const original = el.dataset.original;
         if (!original || el.dataset.scrambling === "1") return;
         el.dataset.scrambling = "1";
@@ -109,16 +109,33 @@
     };
 
     document.querySelectorAll(".project-title a").forEach((link) => {
-        // store plain-text original with \n for <br>
-        link.dataset.original = link.innerHTML.replace(/<br\s*\/?>/gi, "\n");
-        link.closest(".project").addEventListener("mouseenter", () => scramble(link));
+        // Clean original text: split by <br>, trim each line, join by \n
+        const clean = link.innerHTML
+            .split(/<br\s*\/?>/gi)
+            .map((s) => s.trim())
+            .filter(Boolean)
+            .join("\n");
+        link.dataset.original = clean;
+        link.innerHTML = clean.replace(/\n/g, "<br>");
+
+        // Trigger on direct title link hover
+        link.addEventListener("mouseenter", () => scramble(link));
+
+        // Trigger on project card hover
+        const card = link.closest(".project");
+        if (card) {
+            card.addEventListener("mouseenter", () => scramble(link));
+        }
+
+        // Support touch tap on mobile
+        link.addEventListener("touchstart", () => scramble(link), { passive: true });
     });
 
     /* ── 4. Scramble project titles on phone scroll ────────────────
        Touch devices have no cursor hover, so trigger the same effect
        once when a project title enters the viewport. Desktop/mouse
        devices remain hover-only. */
-    const isTouchDevice = matchMedia("(pointer: coarse)").matches && !matchMedia("(hover: hover)").matches;
+    const isTouchDevice = matchMedia("(pointer: coarse)").matches || !matchMedia("(hover: hover)").matches;
 
     if (isTouchDevice && "IntersectionObserver" in window && !prefersReducedMotion) {
         const mobileTitleObserver = new IntersectionObserver(
@@ -129,12 +146,12 @@
                     if (title && title.dataset.mobileScrambled !== "1") {
                         title.dataset.mobileScrambled = "1";
                         // Small delay lets the heading settle after the scroll.
-                        setTimeout(() => scramble(title), 100);
+                        setTimeout(() => scramble(title), 120);
                     }
                     mobileTitleObserver.unobserve(entry.target);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.25 }
         );
         document.querySelectorAll(".project").forEach((project) => mobileTitleObserver.observe(project));
     }

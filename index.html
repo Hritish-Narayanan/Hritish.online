@@ -141,13 +141,181 @@
             </div>
 
             <!-- ── PROJECT 01 ── -->
-            <article class="project" data-project="onion">
+            <article class="project" data-project="pentest">
                 <header class="project-head">
                     <span class="project-num">01</span>
                     <h3 class="project-title">
-                        <a href="https://github.com/Hritish-Narayanan/Onion-Wallet" target="_blank" rel="noopener">
-                            ONION<br>WALLET
-                        </a>
+                        <a href="https://github.com/Hritish-Narayanan/Pentest-MCP" target="_blank" rel="noopener">PENTEST<br>MCP</a>
+                    </h3>
+                    <div class="project-meta">
+                        <span>SECURITY / AI AGENTS</span>
+                        <span>2026</span>
+                        <span>PYTHON · FASTMCP · OWASP · STRIX</span>
+                    </div>
+                </header>
+
+                <div class="project-body">
+                    <div class="project-ascii" aria-hidden="true">
+<pre role="img" aria-label="Pentest-MCP architecture diagram">    +-------------------------+
+    |   HOST AI CODING AGENT  |
+    | (Claude Code, Cursor,AGY|
+    +------------+------------+
+                 |
+        stdio JSON-RPC (MCP)
+                 |
+                 v
+    +-------------------------+
+    |   PENTEST-MCP SERVER    |
+    |   (FastMCP / strix)     |
+    +------------+------------+
+          |             |
+          v             v
+    +-----------+ +-----------+
+    | SCOPE GATE| | EXECUTION |
+    | whitelist | | subagents |
+    +-----+-----+ +-----+-----+
+          |             |
+          +------+------+
+                 v
+    +-------------------------+
+    | SARIF 2.1 / REPORT LOGS |
+    +-------------------------+</pre>
+                    </div>
+                    <div class="project-text">
+                        <p class="project-lede">
+                            A local security testing and automated vulnerability assessment
+                            engine exposed through the Model Context Protocol.
+                        </p>
+                        <p class="project-detail">
+                            Enables AI coding agents to perform bounded penetration testing
+                            directly on projects under active development. Uses the host agent
+                            as the reasoning model over local stdio JSON-RPC, enforces strict
+                            server-side authorization gates, and correlates static analysis
+                            with runtime probes into SARIF 2.1 reports.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ── PROJECT 02 ── -->
+            <article class="project project--alt" data-project="airdrop">
+                <header class="project-head">
+                    <span class="project-num">02</span>
+                    <h3 class="project-title">
+                        <a href="https://github.com/Hritish-Narayanan/Airdrop-Reverse-Engineering" target="_blank" rel="noopener">AIRDROP<br>REVERSE</a>
+                    </h3>
+                    <div class="project-meta">
+                        <span>SECURITY / PROTOCOLS</span>
+                        <span>2026</span>
+                        <span>RUST · KOTLIN · AWDL · TLS</span>
+                    </div>
+                </header>
+
+                <div class="project-body">
+                    <div class="project-ascii" aria-hidden="true">
+<pre role="img" aria-label="Universal AirDrop protocol architecture diagram">+-------------------------------------+
+|        OFFICIAL APPLE DEVICE        |
+|        (iPhone, iPad, Mac)          |
++------------------+------------------+
+                   |
+          mDNS / Bonjour (AWDL)
+                   |
+                   v
++-------------------------------------+
+|      UNIVERSAL AIRDROP ENGINE       |
+|  +-------------------------------+  |
+|  | BLE / AWDL Discovery Frame    |  |
+|  +---------------+---------------+  |
+|                  v                  |
+|  | Ephemeral TLS (ECDSA P-256)   |  |
+|  +---------------+---------------+  |
+|                  v                  |
+|  | HTTPS POST /upload Transfer   |  |
+|  +-------------------------------+  |
++------------------+------------------+
+                   |
+                   v
++-------------------------------------+
+|   ANDROID / LINUX NATIVE RECEIVER   |
++-------------------------------------+</pre>
+                    </div>
+                    <div class="project-text">
+                        <p class="project-lede">
+                            Zero-app, memory-safe reverse engineering of Apple's AirDrop
+                            protocol for Android, Linux, and macOS.
+                        </p>
+                        <p class="project-detail">
+                            Enables native interoperability with Apple hardware without jailbreaks
+                            or third-party apps on Apple devices. Integrates BLE discovery,
+                            Bonjour mDNS over AWDL peer-to-peer Wi-Fi frames, and ephemeral
+                            ECDSA P-256 TLS HTTPS transfers directly into the Android share sheet
+                            and 24/7 background receiver service.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ── PROJECT 03 ── -->
+            <article class="project" data-project="mllm">
+                <header class="project-head">
+                    <span class="project-num">03</span>
+                    <h3 class="project-title">
+                        <a href="https://github.com/Hritish-Narayanan/MLLM" target="_blank" rel="noopener">MULTI<br>LLM</a>
+                    </h3>
+                    <div class="project-meta">
+                        <span>AI / MULTI-AGENT</span>
+                        <span>2026</span>
+                        <span>PYTHON · TAURI 2 · RUST · OLLAMA</span>
+                    </div>
+                </header>
+
+                <div class="project-body">
+                    <div class="project-ascii" aria-hidden="true">
+<pre role="img" aria-label="MLLM multi-agent orchestration architecture diagram">       +-----------------------+
+       |      USER PROMPT      |
+       +-----------+-----------+
+                   |
+     +-------------+-------------+
+     |                           |
+     v                           v
++-------------+             +-------------+
+|   AGENT A   |  debate &   |   AGENT B   |
+| (Draft Sol) |<----------->| (Critique)  |
++------+------+  critique   +------+------+
+       |                           |
+       +-------------+-------------+
+                     v
+       +-----------------------+
+       |  CONSENSUS ENGINE     |
+       |  (Verification/Vote)  |
+       +-----------+-----------+
+                   |
+                   v
+       +-----------------------+
+       |   OPTIMIZED OUTPUT    |
+       +-----------------------+</pre>
+                    </div>
+                    <div class="project-text">
+                        <p class="project-lede">
+                            A cross-platform multi-agent system where independent local models
+                            collaborate, debate, and verify outputs.
+                        </p>
+                        <p class="project-detail">
+                            Investigates the hypothesis that multiple small local models with
+                            structured criticism, verification, and voting can outperform a single
+                            monolithic model at lower computational cost. Architected with a clean
+                            runtime abstraction layer, Ollama integration, and a native Tauri 2 desktop shell.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ── PROJECT 04 ── -->
+            <article class="project project--alt" data-project="onion">
+                <header class="project-head">
+                    <span class="project-num">04</span>
+                    <h3 class="project-title">
+                        <a href="https://github.com/Hritish-Narayanan/Onion-Wallet" target="_blank" rel="noopener">ONION<br>WALLET</a>
                     </h3>
                     <div class="project-meta">
                         <span>SECURITY / BLOCKCHAIN</span>
@@ -158,7 +326,7 @@
 
                 <div class="project-body">
                     <div class="project-ascii" aria-hidden="true">
-<pre>    +-------------------------+
+<pre role="img" aria-label="The Onion Wallet architecture diagram">    +-------------------------+
     |   THE ONION WALLET      |
     |   -----------------     |
     |                         |
@@ -198,64 +366,66 @@
                 </div>
             </article>
 
-            <!-- ── PROJECT 02 ── -->
-            <article class="project project--alt" data-project="hect">
+            <!-- ── PROJECT 05 ── -->
+            <article class="project" data-project="trading">
                 <header class="project-head">
-                    <span class="project-num">02</span>
+                    <span class="project-num">05</span>
                     <h3 class="project-title">
-                        <a href="https://github.com/Hritish-Narayanan/Hect-Run-Game" target="_blank" rel="noopener">
-                            HECT<br>RUNNER
-                        </a>
+                        <a href="https://github.com/Hritish-Narayanan/Trading-with-a-ml" target="_blank" rel="noopener">QUANT<br>TRADER</a>
                     </h3>
                     <div class="project-meta">
-                        <span>GAME / UNITY</span>
+                        <span>FINTECH / QUANT ML</span>
                         <span>2026</span>
-                        <span>C# · PROCEDURAL · UNITY 6</span>
+                        <span>PYTHON · PYTORCH MPS · MONTE CARLO</span>
                     </div>
                 </header>
 
                 <div class="project-body">
                     <div class="project-ascii" aria-hidden="true">
-<pre role="img" aria-label="Hect Runner chunk pool and game loop diagram">+-------------------------------------+
-|           CHUNK POOL                |
-|  +----+  +----+  +----+  +----+     |
-|  | C0 |->| C1 |->| C2 |->| C3 |->...|
-|  +----+  +----+  +----+  +----+     |
-|     ^                         |     |
-|     +-------------------------+     |
-|          recycle, never alloc       |
+<pre role="img" aria-label="Quantitative trading ML framework diagram">+-------------------------------------+
+|   TICK DATA: NIFTY / S&P500 / BTC   |
++------------------+------------------+
+                   |
+                   v
 +-------------------------------------+
-|  INPUT -> FSM -> PHYSICS -> SCORE   |
-|   +--+    +--+    +----+    +---+   |
-|   |^ |    |o |    |##  |    |x2 |   |
-|   +--+    +--+    +----+    +---+   |
-|   jump    roll    lean      combo   |
+|      REGIME & VOLATILITY GATE       |
+|    (200 SMA + ATR-Scaled Band)      |
++------------------+------------------+
+                   |
+                   v
++-------------------------------------+
+|    5-TRANCHE INTRADAY ENGINE        |
+|    - Tactical Mean Reversion        |
+|    - Genetic Strategy Evolution     |
+|    - PyTorch Metal MPS GPU          |
++------------------+------------------+
+                   |
+                   v
++-------------------------------------+
+|  ALPHA: 80%+ WIN RATE / DOWNSIDE    |
 +-------------------------------------+</pre>
                     </div>
                     <div class="project-text">
                         <p class="project-lede">
-                            An endless runner rebuilt from a 1,074-line monolith into
-                            eighteen focused scripts across eight namespaces.
-                            No art assets. No prefabs. Everything is code.
+                            Multi-asset quantitative trading framework and genetic strategy
+                            evolution engine accelerated on Apple Silicon MPS.
                         </p>
                         <p class="project-detail">
-                            Pooled chunks, obstacles, coins, powerups. Snappy jump, roll,
-                            lane lean, camera FOV kick. Procedural SFX and a generative
-                            music loop. Trains, barriers, overheads. Distance plus coin
-                            combo multiplier. The monolith is gone; the game remains.
+                            Evaluated across 37,450+ trades on NIFTY 50, S&P 500, and Bitcoin.
+                            Combines volatility-scaled intraday tranches, structural 200 SMA
+                            macro trend filters, and Monte Carlo stress testing to generate
+                            systematic alpha while mitigating drawdown during market shocks.
                         </p>
                     </div>
                 </div>
             </article>
 
-            <!-- ── PROJECT 03 ── -->
-            <article class="project" data-project="bms">
+            <!-- ── PROJECT 06 ── -->
+            <article class="project project--alt" data-project="bms">
                 <header class="project-head">
-                    <span class="project-num">03</span>
+                    <span class="project-num">06</span>
                     <h3 class="project-title">
-                        <a href="https://github.com/Hritish-Narayanan/bookmyshow-movie-notifier" target="_blank" rel="noopener">
-                            BOOKMYSHOW<br>NOTIFIER
-                        </a>
+                        <a href="https://github.com/Hritish-Narayanan/bookmyshow-movie-notifier" target="_blank" rel="noopener">BOOKMYSHOW<br>NOTIFIER</a>
                     </h3>
                     <div class="project-meta">
                         <span>AUTOMATION / PYTHON</span>
@@ -266,7 +436,7 @@
 
                 <div class="project-body">
                     <div class="project-ascii" aria-hidden="true">
-<pre>      watch          detect          notify
+<pre role="img" aria-label="BookMyShow notifier loop diagram">      watch          detect          notify
       |               |               |
       v               v               v
   +----------+   +----------+   +----------+
@@ -291,54 +461,6 @@
                             forty kilometres away. So I wrote a program that opens the page,
                             diffs the listing, and pings me through ntfy the second a closer
                             screen appears. It worked. Love ya. :)
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- ── PROJECT 04 ── -->
-            <article class="project project--alt" data-project="exam">
-                <header class="project-head">
-                    <span class="project-num">04</span>
-                    <h3 class="project-title">
-                        <a href="https://github.com/Hritish-Narayanan/Automatic-exam-google-docs-and-forms-filler" target="_blank" rel="noopener">
-                            AUTO<br>EXAM
-                        </a>
-                    </h3>
-                    <div class="project-meta">
-                        <span>EXTENSION / AI</span>
-                        <span>2025</span>
-                        <span>JAVASCRIPT · FIREFOX · Z.AI</span>
-                    </div>
-                </header>
-
-                <div class="project-body">
-                    <div class="project-ascii" aria-hidden="true">
-<pre role="img" aria-label="Auto Exam Google Forms, Google Docs, and Z.AI API workflow">+-------------+         +-------------+
-| GOOGLE FORM |         | GOOGLE DOC  |
-|  +---+      |         |  +---+      |
-|  | Q |--+   |         |  | W |--+   |
-|  +---+  |   |         |  +---+  |   |
-|  +---+  |   |         |         |   |
-|  | A |<-+---+------+  |         |   |
-|  +---+  |   |      |  |         |   |
-+-------------+   |  +--+------------v----------+
-                        +-- |     Z.AI API      |
-                            | extract -> answer |
-                            | -> fill -> assist |
-                            +-------------------+</pre>
-                    </div>
-                    <div class="project-text">
-                        <p class="project-lede">
-                            A Firefox extension that reads Google Forms, sends the questions
-                            to an LLM, and fills in the answers. In Docs, it becomes an
-                            AI writing assistant.
-                        </p>
-                        <p class="project-detail">
-                            Extracts questions and candidate answers, routes them through the
-                            z.ai API, and completes the form. In Google Docs it offers
-                            AI-powered writing assistance — content generation and suggestions,
-                            in place, without leaving the page.
                         </p>
                     </div>
                 </div>
