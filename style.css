@@ -3,10 +3,10 @@
    Editorial / newspaper collage / ASCII / portrait system
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── Helmswald Post (masthead blackletter — 1001fonts.com/helmswald-post-font.html) ── */
+/* ── Chomsky (masthead blackletter — 1001fonts.com/chomsky-font.html) ── */
 @font-face {
-    font-family: "Helmswald Post";
-    src: url("assets/fonts/HelmswaldPost.otf") format("opentype");
+    font-family: "Chomsky";
+    src: url("assets/fonts/Chomsky.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@
     --line:       #16130e;
 
     --font-black:  "UnifrakturMaguntia", serif;
-    --font-blackletter: "Helmswald Post", "UnifrakturMaguntia", serif;
+    --font-chomsky: "Chomsky", "UnifrakturMaguntia", serif;
     --font-serif:  "Instrument Serif", Georgia, serif;
     --font-sans:   "Space Grotesk", -apple-system, sans-serif;
     --font-mono:   "IBM Plex Mono", "SF Mono", monospace;
@@ -92,7 +92,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .nav-brand {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: 1.6rem;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -187,7 +187,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .hero-name {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-chomsky);
     font-weight: 400;
     font-size: clamp(5rem, 12vw, 10.5rem);
     line-height: 0.92;
@@ -272,7 +272,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .texture-col p { margin-bottom: 0.5rem; }
 .texture-word {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: 1.6rem;
     color: var(--ink);
     line-height: 1;
@@ -298,7 +298,7 @@ img { display: block; max-width: 100%; height: auto; }
     right: 4%;
     left: auto;
     z-index: 3;
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: clamp(1.4rem, 2.2vw, 2rem);
     color: var(--ink);
     transform: rotate(-2deg);
@@ -365,7 +365,7 @@ section[id] { scroll-margin-top: 3rem; }
     border-bottom: 3px solid var(--line);
 }
 .section-title {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-chomsky);
     font-weight: 400;
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     line-height: 1;
@@ -538,7 +538,7 @@ section[id] { scroll-margin-top: 3rem; }
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: clamp(6rem, 22vw, 20rem);
     color: var(--ink);
     opacity: 0.04;
@@ -621,7 +621,7 @@ section[id] { scroll-margin-top: 3rem; }
     max-height: 34rem;
 }
 .about-newsprint-word {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: 1.4rem;
     color: var(--ink);
     margin: 0.5rem 0;
@@ -746,7 +746,7 @@ section[id] { scroll-margin-top: 3rem; }
     color: color-mix(in srgb, var(--paper) 55%, transparent);
 }
 .footer-brand {
-    font-family: var(--font-blackletter);
+    font-family: var(--font-black);
     font-size: 0.95rem;
     color: var(--paper);
     letter-spacing: 0.04em;
